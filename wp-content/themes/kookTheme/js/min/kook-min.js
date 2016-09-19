@@ -1,0 +1,1 @@
+$(document).ready(function(){function t(){var t=0;$(".amount-time").each(function(){t+=Number($(this).text())}),n.text(t)}var n=$(".total-hours");t()});
