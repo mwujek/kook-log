@@ -1,1 +1,1 @@
-$(document).ready(function(){function t(){var t=0;$(".amount-time").each(function(){t+=Number($(this).text())}),n.text(t)}var n=$(".total-hours");t()});
+$(document).ready(function(){function t(){var t=0,n=0,u=0;$(".amount-time").each(function(){t+=Number($(this).text())}),$(".amount-waves").each(function(){n+=Number($(this).text())});var u=(n/t).toFixed(1);e.text(t),a.text(n),o.text(u)}var e=$(".total-hours"),a=$(".total-waves"),o=$(".total-wph");t()});

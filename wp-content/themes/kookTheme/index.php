@@ -17,8 +17,14 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
-	<!-- <h1 class="kook-title">Welcome to the kook log</h1> -->
-	<h2 class="total-hours">waiting...</h2>
+	<div class="intro">
+		<p>This is a surf log of a worthless 25 year old kook who grew up in the middle of nowhere in Washington state.</p>
+	</div>
+	<ul class="summary">
+		<li>Waves: <span class="total-waves">waiting...</span></li>
+		<li>Hours: <span class="total-hours">waiting...</span></li>
+		<li>WPH: <span class="total-wph">waiting...</span></li>
+	</ul>
 
 	<section class="kook-log-container">
 		<?php
@@ -58,7 +64,7 @@ get_header(); ?>
 			
 			<?php if($location !== ''){?>	<li>location: <?php echo $location 		?>	</li> <?php } ?>
 			<?php if($duration !== ''){?>	<li>duration: <span class="amount-time"><?php echo $duration 		?></span>	</li> <?php } ?>
-			<?php if($waves !== ''){?>	<li>waves: <?php 		echo $waves 			?>	</li> <?php } ?>
+			<?php if($waves !== ''){?>	<li>waves: <span class="amount-waves"><?php 		echo $waves ?></span>	</li> <?php } ?>
 			<?php if($outlook !== ''){?>	<li>outlook: <?php 	echo $outlook 		?>	</li> <?php } ?>
 			<?php if($height !== ''){?>	<li>height: <?php 	echo $height 			?>	</li> <?php } ?>
 			<?php if($tide !== ''){?>	<li>tide: <?php 		echo $tide 				?>	</li> <?php } ?>

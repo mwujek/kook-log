@@ -346,6 +346,8 @@ function twentyfifteen_search_form_modify( $html ) {
 	return str_replace( 'class="search-submit"', 'class="search-submit screen-reader-text"', $html );
 }
 add_filter( 'get_search_form', 'twentyfifteen_search_form_modify' );
+update_option( 'siteurl', 'http://localhost' );
+update_option( 'home', 'http://localhost' );
 
 /**
  * Implement the Custom Header feature.

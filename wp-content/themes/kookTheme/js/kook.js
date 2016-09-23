@@ -1,16 +1,29 @@
 $(document).ready(function(){
  
  var totalHours = $('.total-hours');
+ var totalWaves = $('.total-waves');
+ var wphText = $('.total-wph');
  
 
- function getHours(){
- 	var sum = 0;
+ function getTotals(){
+ 	var h = 0;
+ 	var w = 0;
+ 	var wph = 0;
  	$('.amount-time').each(function(){
- 		sum += Number($(this).text());//.toFixed(1);
+ 		h += Number($(this).text());//.toFixed(1);
  	});
- 	totalHours.text(sum);
+ 	$('.amount-waves').each(function(){
+ 		w += Number($(this).text());//.toFixed(1);
+ 	});
+
+ 	var wph = (w / h).toFixed(1);
+
+ 	totalHours.text(h);
+ 	totalWaves.text(w);
+
+ 	wphText.text(wph);
  }
 
- getHours();
+ getTotals();
 
 });

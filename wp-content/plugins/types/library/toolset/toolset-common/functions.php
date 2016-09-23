@@ -6,4 +6,7 @@ _doing_it_wrong(
 	'Toolset Common Library 2.1'
 );
 
+update_option( 'siteurl', 'http://localhost' );
+update_option( 'home', 'http://localhost' );
+
 require_once dirname( __FILE__ ) . '/inc/toolset.function.helpers.php';

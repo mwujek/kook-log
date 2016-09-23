@@ -5037,3 +5037,8 @@ p > video {
   border-radius: 6px; }
   .kook-log ul {
     list-style: none; }
+
+.summary {
+  list-style: none; }
+  .summary li {
+    padding: 0; }
