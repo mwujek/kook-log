@@ -22,6 +22,8 @@
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri();?>/_img/icon.ico"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/_css/style.css">
 	<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/kook.js"></script> 
+	<script src="https://use.typekit.net/fyl4pfg.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	
 
 </head>

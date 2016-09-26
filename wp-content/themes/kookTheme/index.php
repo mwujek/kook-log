@@ -50,32 +50,43 @@ get_header(); ?>
 			$image = 			types_render_field('session-image');
 			$swell = 			types_render_field('dominant-swell');
 			$buds = 			types_render_field('session-buds');
+			$wph = $waves / $duration;
 		?> 
 
 
 	<!-- START INDIVIDUAL POST TEMPLATE -->
-	<article class="kook-log">
+	<article class="kook-log"
+		session-location="<?php echo $location ?>"
+		session-outlook="<?php echo $outlook ?>"
+		session-wph="<?php echo $wph ?>"
+		
+		>
 
+	<div class="row">
+	</div>
 
 
 		
 		<ul>
 			<li>Conditions: <?php echo $conditions ?></li>
 			
-			<?php if($location !== ''){?>	<li>location: <?php echo $location 		?>	</li> <?php } ?>
-			<?php if($duration !== ''){?>	<li>duration: <span class="amount-time"><?php echo $duration 		?></span>	</li> <?php } ?>
-			<?php if($waves !== ''){?>	<li>waves: <span class="amount-waves"><?php 		echo $waves ?></span>	</li> <?php } ?>
-			<?php if($outlook !== ''){?>	<li>outlook: <?php 	echo $outlook 		?>	</li> <?php } ?>
-			<?php if($height !== ''){?>	<li>height: <?php 	echo $height 			?>	</li> <?php } ?>
-			<?php if($tide !== ''){?>	<li>tide: <?php 		echo $tide 				?>	</li> <?php } ?>
-			<?php if($wind !== ''){?>	<li>wind: <?php 		echo $wind 				?>	</li> <?php } ?>
-			<?php if($image !== ''){?>	<li>image: <?php 		echo $image 			?>	</li> <?php } ?>
-			<?php if($swell !== ''){?>	<li>swell: <?php 		echo $swell 			?>	</li> <?php } ?>
-			<?php if($buds !== ''){?>	<li><?php echo $buds ?></li>	<?php } ?>
+			<?php if($location 	!== ''){?>	<li>location: 	<?php echo $location 		?>	</li> <?php } ?>
+			<?php if($duration 	!== ''){?>	<li>duration: 	<span class="amount-time"><?php echo $duration 		?></span>	</li> <?php } ?>
+			<?php if($waves 	!== ''){?>	<li>waves: 		<span class="amount-waves"><?php 		echo $waves ?></span>	</li> <?php } ?>
+			<?php if($outlook 	!== ''){?>	<li>outlook: 	<?php 	echo $outlook 		?>	</li> <?php } ?>
+			<?php if($height 	!== ''){?>	<li>height: 	<?php 	echo $height 			?>	</li> <?php } ?>
+			<?php if($tide 		!== ''){?>	<li>tide: 		<?php 		echo $tide 				?>	</li> <?php } ?>
+			<?php if($wind 		!== ''){?>	<li>wind: 		<?php 		echo $wind 				?>	</li> <?php } ?>
+			<?php if($image 	!== ''){?>	<li>image: 		<?php 		echo $image 			?>	</li> <?php } ?>
+			<?php if($swell 	!== ''){?>	<li>swell: 		<?php 		echo $swell 			?>	</li> <?php } ?>
+			<?php if($buds 		!== ''){?>	<li>			<?php echo $buds ?></li>	<?php } ?>
 		 </ul>
+
 		<div class="post-content"> <?php echo the_content() ?> </div>
 
 	</article>
+
+	<!-- END INDIVIDUAL POST TEMPLATE -->
 
 	<?php endwhile; ?>
 
